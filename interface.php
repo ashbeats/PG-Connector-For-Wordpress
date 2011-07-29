@@ -2,7 +2,7 @@
 $dir = WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__), "", plugin_basename(__FILE__));
 $proxy_path = WP_PLUGIN_DIR.'/'.str_replace(basename(__FILE__), "", plugin_basename(__FILE__)) . "configs/";
 $proxy_filename = "proxies.inc.txt";
-	
+$proxy_judgeurl = $dir . "judge/proxy-judge-wpsbox.php";
 ?>
 <link href="<?php echo $dir ?>css/pg-style.css" rel="stylesheet" type="text/css" />
 
@@ -22,6 +22,11 @@ $proxy_filename = "proxies.inc.txt";
 <h3>Filename: </h3>
 <div id="message" class="updated highlight">
 <strong style="color: rgb(255, 0, 0);">proxies.inc</strong>
+</div>
+
+<h3>Proxy Judge URL: </h3>
+<div id="message" class="updated highlight">
+<strong style="color: rgb(255, 0, 0);"><?php echo $proxy_judgeurl; ?></strong>
 </div>
 
 </div>
