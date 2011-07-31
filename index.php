@@ -3,7 +3,7 @@
 Plugin Name: ProxyGoblin Connector for WPsBOX
 Plugin URI: http://proxygb.com/
 Description: Connector to allow ProxyGoblin to communicate with WPsBox
-Version: 1.0.0
+Version: 1.2.0
 Author: Ash 
 Author URI: http://proxygb.com/
 */
@@ -21,6 +21,7 @@ require_once("global.functions.php");
     
 	function get_proxies_hook($val='')
     {
+    	// Check if Google D
         return get_proxies(); 
     }
 
@@ -29,8 +30,7 @@ require_once("global.functions.php");
 
     function set_proxies_hook($option='', $newvalue='', $oldvalue='')
     {
-    	//update_option($option, $newvalue);
-		
+    		
        set_proxies($option); 	   
 	   return $newvalue;  	      
     }
@@ -49,18 +49,17 @@ require_once("global.functions.php");
 
 	function pgmenu_create()
 	{
-		$page_title ="My Page Tie";
-		$menu_title ="Menu Titlesss";
-		$capability ="administrator";
-		$menu_slug = "pg_setting";
-		
-		//add_object_page( $page_title, $menu_title, $capability, $menu_slug, $function = '', $icon_url = '');
 		$icon = WP_PLUGIN_URL.'/'.str_replace(basename(__FILE__), "", plugin_basename(__FILE__)) . "css/proxygoblin-icon.png";
 		
-		add_submenu_page( 'edit.php?post_type=auto_comments', 'PGoblin Connector for WPsBOX', ' <img src="' . $icon . '" align="absmiddle"> PG Connector', 'administrator', 'pg_setting', 'pg_setting' );
+		add_submenu_page( 'edit.php?post_type=auto_comments', 'PGoblin Connector for WPsBOX', 
+									'<img src="' . $icon . '" align="absmiddle"> PG Connector', 
+									'administrator', 
+									'pg_setting', 
+									'pg_setting' );
 	}
 	
- 	function pg_setting(){
+ 	function pg_setting()
+	{
 		require_once(dirname(__FILE__).'/interface.php');
 	}
 

@@ -10,6 +10,23 @@ DIV#connection_info
 	width: 785px !important;
 	padding: 4px 16px 16px !important;
 	border: 1px solid #707070;
+	font-size: 14px;
+	font-family: arial;
+}
+#connection_info A.edit_trigger, A.refresh_api, A.proxylist_select_edit_trigger
+{
+	color: #0926BC;
+	text-decoration: none;
+	cursor: hand;
+	font-weight: bold;
+}
+DIV.pg_settings_edit
+{
+	padding-bottom: 2px;
+	background-color: #FFFFFF !important;
+	color: #0E61C2;
+	font-weight: bold;
+	font-size: 14px !important;
 }
 DIV#connection_info P
 {
@@ -26,8 +43,39 @@ DIV#connection_info .updated
 {
 	margin-left: 0 !important;
 	padding: 5px !important;
-	font-family: "courier new" !important;
 	font-size: 11px !important;
 	background-color: #FEFEFE;
 	border: 1px solid #A0A0A0;
+	color: #CB0000;
+}
+.tips
+{
+	color: #222222 !important;
+	cursor: pointer !important;
+}
+#connection_info TEXTAREA
+{
+	width: 100%;
+	font-size: 11px;
+	color: #010101 !important;
+}
+.pg_inlineclass BUTTON
+{
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-right: 6px;
+}
+.pg_inlineclass INPUT, .pg_inlineclass SELECT
+{
+	width: 268px !important;
+	color: #1917E7;
+	margin-right: 12px;
+}
+A.edit_trigger, A.proxylist_select_edit_trigger
+{
+	/*+placement:float-right 0px 0px;*/
+	float: right;
+	position: relative;
+	left: 0px;
+	top: 0px;
 }
