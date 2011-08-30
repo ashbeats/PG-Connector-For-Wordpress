@@ -171,20 +171,10 @@ echo (trim($passcode)=="" ? "Passcode Not Configured Yet." : $passcode);
 <a href="#" class="refresh_api">[Refresh]</a>
 
 
-<h3>Proxy Judge URL: </h3>
-<i>Copy & Paste this judge into your ProxyGoblin "Judge Url" field</i>
-<div id="message" class="updated highlight">
-<strong style="color: rgb(255, 0, 0);"><?php echo $proxy_judgeurl; ?></strong>
-</div>
-
 </div>
     
 
 <p><a href="http://molura.zendesk.com/entries/20292311-wpsbox-proxy-goblin-approved" target="_blank">Tutorial &#187;</a> | <a href="http://molura.zendesk.com/" target="_blank">Support &#187;</a> </p>
-
-
-
-
 
 <h2>What does this Connector do?</h2>
 <p>ProxyGoblin's  Connector alters WPsBox to use  proxies from a text file. </p>
@@ -195,6 +185,8 @@ using FTP to your WPsBox from within the Goblin.<br />
   <br />
   Proxy Goblin &amp; WPsBox - Complete Automation. :)</p>
 <p>&nbsp;</p>
-<h2>Important Notes:</h2>
-<p>The active proxies text file is no longer active</p>
+
+<h2><em>Notes:</em></h2>
+<p>Current Version: <em>3.0</em></p>
+<p><em>Hosted judge is deprecated.</em> Use "Auto-Select" in the Goblin</p>
 </div>
