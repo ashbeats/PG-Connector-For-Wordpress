@@ -26,7 +26,14 @@ if($pg_activelist=='')
 $pg_activelist_text = ($pg_activelist == "proxies.google.inc")? "Only Google Friendly":"All Proxies" ;
 $pg_activelist_text .= " (". get_proxy_count($pg_activelist) .")";
 
+if(intval(get_option('alb_proxy','0'))==0)
+{
+	echo '<div id="message" class="error"><p>» <b>Don\'t use Proxy List</b> is selected in WpsBox</p></div>';
+	
+}
 
+
+//$change_api_msg = '<div id="message" class="updated"><p>API Key Updated. Please update your tasks if you are using the old API Key</p></div>';
 
 ?>
 
@@ -70,7 +77,7 @@ $(document).ready(function(){
 		{
 			$('.api_display').html('<img src="<?php echo $dir ?>css/indicator.gif">');
 			$.get('<?php echo $ajax_url ?>',  { p: sValue}, function(data){
-                //$('.api_display').fadeOut().html(data).fadeIn("slow").find('#pg_api').select();             
+                
                 $('.api_display').html(data).find('#pg_api').select();             
             });
 		}
@@ -110,7 +117,7 @@ $(document).ready(function(){
 		cancel: "Cancel",
         onblur: 'ignore',
 		style: 'display: inline',
-        cssclass: 'pg_inlineclass',
+        cssclass: 'pg_inlineclass'
 		
     });
 	
@@ -126,6 +133,7 @@ $(document).ready(function(){
 </script>
 
 <div class="item_custom_message"><p><a href="http://proxygb.com/?ref=wordpress"><img src="http://proxygb.com/images/proxygoblin-connecter.png" /></a></p>
+
 <p><span style="color: #360; font-family: Verdana,Geneva,sans-serif; font-size: small;"><strong>The Connector is Active</strong></span></p>
 <h2>Connection Information:</h2>
 <div id="connection_info">

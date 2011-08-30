@@ -3,7 +3,7 @@
 Plugin Name: ProxyGoblin Connector for WPsBOX
 Plugin URI: http://proxygb.com/
 Description: Connector to allow ProxyGoblin to communicate with WPsBox
-Version: 1.2.0
+Version: 2.0.0
 Author: Ash 
 Author URI: http://proxygb.com/
 */

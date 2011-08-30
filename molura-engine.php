@@ -36,11 +36,14 @@ if (isset($_POST['passcode']))
         $isAuthenticated = false;
     }
     
+}else{
+	echo "Unauthorized User";
+    die();
 }
 
 if (!$isAuthenticated)
 {
-    echo "Invalid Credentials";
+    echo "Invalid Credentials. Did you change your Passcode recently?";
     die();
 } else
 {
