@@ -1,0 +1,16 @@
+What does this Connector do?
+
+ProxyGoblin's Connector alters WPsBox to use proxies from a text file.
+
+Without this connector, you would have to manually copy & paste proxies
+to the settings window. But with this plugin, you can automatically upload proxies
+using FTP to your WPsBox from within the Goblin.
+
+Proxy Goblin & WPsBox - Complete Automation. :)
+
+ 
+Notes:
+
+Current Version: 3.0
+
+Hosted judge is deprecated. Use "Auto-Select" in the Goblin
